@@ -1,0 +1,30 @@
+.breadcrumbs {
+	padding-top: 58px;
+	margin-bottom: 22px;
+	display: flex;
+	align-items: center;
+	@include r(650) {
+		padding-top: 0px;
+		display: none;
+	}
+	&__icon {
+		margin-left: 13px;
+		margin-right: 13px;
+		svg {
+			width: 10px;
+			height: 10px;
+		}
+	}
+	&__link {
+		color: $accent;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+		&--now {
+			text-decoration: none;
+			pointer-events: none;
+			color: #A7B2DE;
+		}
+	}
+}

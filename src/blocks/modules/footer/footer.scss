@@ -1,0 +1,154 @@
+.footer {
+	color: $light;
+	margin-top: -132px;
+	&__top {
+		background-color: $accent;
+		padding-top: 170px;
+		padding-bottom: 40px;
+	}
+	&__bottom {
+		background-color: $dark;
+		min-height: 60px;
+		display: flex;
+		align-items: center;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 26px;
+		@include r(1200) {
+			
+		}
+		@include r(650) {
+			padding-top: 20px;
+			padding-bottom: 20px;
+			line-height: 20px;
+		}
+		a {
+			color: #FF0000;
+			text-decoration: none;
+			&:hover {
+				color: $light;
+			}
+		}
+	}
+	&__columns {
+		display: flex;
+		justify-content: space-between;
+		@include r(1200) {
+			display: block;
+		}
+		@include r(650) {
+
+		}
+	}
+	&__column-left {
+		width: 320px;
+		flex-shrink: 0;
+	}
+	&__column-right {
+		flex-grow: 1;
+		min-width: 1px;
+	}
+	&__logo {
+		display: block;
+		margin-bottom: 38px;
+		svg {
+			width: 237px;
+			height: 35px;
+			display: block;
+		}
+	}
+	&__phone {
+		display: flex;
+		align-items: center;
+		margin-bottom: 18px;
+		svg {
+			width: 26px;
+			height: 26px;
+			margin-right: 15px;
+			fill: $light;
+		}
+		span {
+			font-size: 16px;
+			color: $light;
+			line-height: 19px;
+		}
+		&:hover {
+			span {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__nav {
+		display: flex;
+		padding-top: 8px;
+		margin-bottom: 24px;
+		@include r(1200) {
+			display: none;
+		}
+		@include r(650) {
+
+		}
+	}
+	&__link {
+		font-size: 14px;
+		line-height: 20px;
+		text-transform: uppercase;
+		margin-left: 44px;
+		color: $light;
+		&--active {
+			text-decoration: underline;
+		}
+		&:hover {
+			text-decoration: underline;
+		}
+		&:first-child {
+			margin-left: 0px;
+		}
+	}
+	&__text {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 26px;
+		strong {
+			font-weight: 500;
+		}
+	}
+	&__mail {
+		text-decoration: none;
+		color: $light;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.mmenu {
+	position: fixed;
+	background-color: $accent;
+	width: 460px;
+	max-width: 80%;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	z-index: 5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding-left: 15px;
+	padding-right: 15px;
+	text-align: center;
+	transition: 0.3s all;
+	left: -100%;
+	&--open {
+		left: 0%;
+	}
+	&__link {
+		display: block;
+		color: $light;
+		text-decoration: none;
+		font-size: 22px;
+		line-height: 26px;
+		margin-bottom: 15px;
+	}
+}

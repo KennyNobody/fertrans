@@ -1,0 +1,159 @@
+.contacts {
+	@include r(1200) {
+		
+	}
+	@include r(650) {
+
+	}
+	&__columns {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		&--bottom {
+			padding-top: 54px;
+		}
+		@include r(650) {
+			display: block;
+		}
+	}
+	&__column {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 20px;
+		&--1 {
+			width: calc(100% / 12 * 5);
+			@include r(1200) {
+				padding-right: 15px;
+			}
+			@include r(650) {
+				padding-right: 0px;
+				width: 100%;
+			}
+		}
+		&--2 {
+			width: calc(100% / 12 * 4);
+			@include r(1200) {
+				padding-right: 15px;
+			}
+			@include r(650) {
+				padding-right: 0px;
+				width: 100%;
+			}
+		}
+		&--3 {
+			width: calc(100% / 12 * 3);
+			@include r(650) {
+				width: 100%;
+			}
+		}
+		strong {
+			color: #253D95;
+			font-weight: 500;
+		}
+		a {
+			color: $dark;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		i {
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 20px;
+			color: #279451;
+		}
+		b {
+			font-weight: 500;
+		}
+	}
+	&__section {
+		margin-bottom: 30px;
+	}
+	&__title {
+		font-weight: normal;
+		font-size: 20px;
+		line-height: 26px;
+		margin-bottom: 30px;
+	}
+	&__map {
+		height: 196px;
+		position: relative;
+	}
+	&__map-content {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		height: 400px;
+		background-color: $light;
+		z-index: 2;
+	}
+	&__block {
+		display: flex;
+	}
+	&__block-column {
+		&--left {
+			padding-top: 260px;
+			position: relative;
+			width: calc(100% / 12 * 9);
+			background-color: #EFF1F5;
+			padding-bottom: 25px;
+			@include r(1200) {
+				&:after {
+					background-color: #EFF1F5;
+					position: absolute;
+					top: 0px;
+					bottom: 0px;
+					left: 100%;
+					width: 100vw;
+					content: "";
+				}
+			}
+			&:before {
+				background-color: #EFF1F5;
+				position: absolute;
+				top: 0px;
+				bottom: 0px;
+				right: 100%;
+				width: 100vw;
+				content: "";
+			}
+		}
+		&--right {
+			position: relative;
+			width: calc(100% / 12 * 3);
+			@include r(1200) {
+				display: none;
+			}
+			img {
+				width: 600px;
+				height: auto;
+				position: absolute;
+				right: 0px;
+				bottom: 110px;
+			}
+		}
+	}
+	&__document {
+		border: 2px solid #253D95;
+		height: 50px;
+		display: flex;
+		width: 278px;
+		align-items: center;
+		justify-content: space-around;
+		svg {
+			width: 27px;
+			height: 35px;
+		}
+		span {
+			font-weight: normal;
+			font-size: 20px;
+			line-height: 26px;
+			color: #253D95;
+		}
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}
